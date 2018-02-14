@@ -113,8 +113,17 @@ end
 def break_eggs
   counter = 0
   while counter < NUM_EGGS
-    counter += 1
+    counter += 1Asking User if Ready for Next Stepep
     print "Breaking egg #{counter}"
+
     print_progress_bar
   end
+end
+
+#Asking User if Ready for Next Step
+def ask_if_ready(step, index)
+  puts "Are you ready for step #{index + 1}?\n(#{step[:description]})"
+  answer = gets.chomp
+
+  answer.upcase == 'Y'
 end
